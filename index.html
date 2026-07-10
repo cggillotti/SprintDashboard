@@ -164,7 +164,7 @@ a.issue-link:hover { text-decoration: underline; color: #8ba3ff; }
 <body>
 
 <h1>⚡ Sprint Dashboard — CMS Sprint 152</h1>
-<p class="subtitle">Board: Sprint Board (397) &bull; Project: Web Team Sprint (CTWA+) &bull; Jul 10, 2026 04:57 PM UTC</p>
+<p class="subtitle">Board: Sprint Board (397) &bull; Project: Web Team Sprint (CTWA+) &bull; Jul 10, 2026 05:04 PM UTC</p>
 
 <!-- Summary Cards -->
 <div class="card-grid">
@@ -176,16 +176,16 @@ a.issue-link:hover { text-decoration: underline; color: #8ba3ff; }
     <div class="card">
         <div class="label">Story Points</div>
         <div class="value green">81 total</div>
-        <div class="sub">29 completed &bull; 52 remaining</div>
+        <div class="sub">34 completed &bull; 47 remaining</div>
     </div>
     <div class="card">
         <div class="label">Sprint Items</div>
         <div class="value purple">32</div>
-        <div class="sub">21 active</div>
+        <div class="sub">20 active</div>
     </div>
     <div class="card">
         <div class="label">Historical Velocity</div>
-        <div class="value yellow">58.0</div>
+        <div class="value yellow">58.5</div>
         <div class="sub">avg SP/sprint (last 10)</div>
     </div>
     <div class="card">
@@ -201,12 +201,12 @@ a.issue-link:hover { text-decoration: underline; color: #8ba3ff; }
     <div class="forecast-grid">
         <div class="forecast-item">
             <div class="label">Completion</div>
-            <div class="value">36%</div>
+            <div class="value">42%</div>
             <div class="sub">of planned SP</div>
         </div>
         <div class="forecast-item">
             <div class="label">Remaining</div>
-            <div class="value">52 SP</div>
+            <div class="value">47 SP</div>
             <div class="sub">uncompleted</div>
         </div>
         <div class="forecast-item">
@@ -216,13 +216,13 @@ a.issue-link:hover { text-decoration: underline; color: #8ba3ff; }
         </div>
         <div class="forecast-item">
             <div class="label">Estimated Capacity</div>
-            <div class="value">49.1 SP</div>
+            <div class="value">49.5 SP</div>
             <div class="sub">at current velocity</div>
         </div>
         <div class="forecast-item">
             <div class="label">Status</div>
-            <div class="value red">⚠️ At Risk</div>
-            <div class="sub">May not finish all items</div>
+            <div class="value green">✅ On Track</div>
+            <div class="sub">Capacity covers remaining work</div>
         </div>
     </div>
 </div>
@@ -417,8 +417,8 @@ a.issue-link:hover { text-decoration: underline; color: #8ba3ff; }
 <tr>
             <td><a href="https://cmuteam.atlassian.net/browse/CMS-3260" target="_blank" rel="noopener">CMS-3260</a></td>
             <td>News Index filtering and RSS Feed configuration do not behav</td>
-            <td><span class="status-badge status-code-review">Code Review</span></td>
-            <td>Unassigned</td>
+            <td><span class="status-badge status-demo">Demo</span></td>
+            <td>Ian Moffitt</td>
             <td class="sp-cell">5</td>
             <td class="days-ok">0m</td>
         </tr>
@@ -879,10 +879,10 @@ Links in the CTA do not open in a new window when set to in the AX. New window i
         <span class="days-ok"><strong>In Status:</strong> 0m</span>
     </div>
 </div>
-<div class="card" data-project="CMS" data-status="Code Review">
+<div class="card" data-project="CMS" data-status="Demo">
     <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
         <span class="project-tag project-cms">CMS</span>
-        <span class="status-badge status-code-review">Code Review</span>
+        <span class="status-badge status-demo">Demo</span>
     </div>
     <div style="font-size:13px;font-weight:600;margin-bottom:4px;">
         <a href="https://cmuteam.atlassian.net/browse/CMS-3260" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">CMS-3260</a>
@@ -890,7 +890,7 @@ Links in the CTA do not open in a new window when set to in the AX. New window i
     <div style="font-size:12px;color:var(--text);margin-bottom:4px;line-height:1.4;">News Index filtering and RSS Feed configuration do not behave as expected</div>
     <div style="display:flex;gap:12px;font-size:11px;color:var(--text-dim);margin-bottom:6px;">
         <span><strong>SP:</strong> 5</span>
-        <span><strong>Assignee:</strong> Unassigned</span>
+        <span><strong>Assignee:</strong> Ian Moffitt</span>
         <span class="days-ok"><strong>In Status:</strong> 0m</span>
     </div>
 </div>
@@ -1107,7 +1107,7 @@ Contact or Service Now Ticket
             <table style="font-size:11px;width:100%;">
                 <thead><tr><th>Sprint</th><th>S151</th><th>S150</th><th>S149</th><th>S148</th><th>S147</th></tr></thead>
                 <tbody>
-                    <tr><td style="font-weight:600;color:var(--text-dim);">Tickets</td><td>4</td><td>5</td><td>12</td><td>7</td><td>14</td></tr>
+                    <tr><td style="font-weight:600;color:var(--text-dim);">Tickets</td><td>5</td><td>5</td><td>12</td><td>7</td><td>14</td></tr>
                 </tbody>
             </table>
             -->
@@ -1299,7 +1299,7 @@ Contact or Service Now Ticket
     <div class="row">
         <div class="col">
             <div class="chart-container">
-                <h3>Status Distribution</h3>
+                <h3>Status Distribution - {$sprint_name}</h3>
                 <canvas id="statusChart"></canvas>
             </div>
         </div>
@@ -1490,7 +1490,7 @@ new Chart(document.getElementById('velocityChart'), {
         datasets: [
             {
                 label: 'Completed SP',
-                data: [67.0, 68.0, 68.0, 30.0, 64.0, 87.0, 37.0, 72.0, 53.0, 34.0],
+                data: [67.0, 68.0, 68.0, 30.0, 64.0, 87.0, 37.0, 72.0, 53.0, 39.0],
                 backgroundColor: '#34d399',
                 borderRadius: 4,
             },
